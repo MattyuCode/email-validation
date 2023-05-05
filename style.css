@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #0f0c29, #383276, #24243e);
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.radio {
+    background: #fff;
+    width: 550px !important;
+    padding: 35px 25px;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+
+.spinner {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 45px; */
+}
+
+.spinner .loader {
+    opacity: 0.8;
+    color: hsl(220deg 96% 49%);
+    font-size: 8vh;
+    font-weight: bold;
+    font-family: Consolas, Menlo, Monaco, monospace !important;
+}
+
+.loader span:nth-child(odd) {
+    animation-delay: 0.4s;
+}
+
+
+.loader span {
+    display: inline-block;
+    animation: pulse 0.4s alternate infinite ease-in-out;
+}
+
+@keyframes pulse {
+    100% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+}
+
+.passwrd {
+    position: relative;
+}
+
+.icon {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 80%;
+    transform: translateY(-80%);
+    color: #919191;
+}
+
+.icon.isError {
+    top: 60%;
+    right: 40px;
+    color: #dc3545;
+}
+
+.icon.isNotError {
+    top: 80%;
+    right: 40px;
+    color: #198754;
+}
+
+.icon.esError {
+    top: 60%;
+    right: 40px;
+    color: #dc3545;
+}
+
+.icon.NoEsError {
+    top: 80%;
+    right: 40px;
+    color: #198754;
+}
+
+/* input[type="text"]+.icon {
+    display: none;
+}
+
+input[type="password"]+.icon {
+    display: inline-block;
+}
+
+.fa-eye-slash {
+    display: none;
+}
+
+input[type="text"]+.icon .fa-eye-slash {
+    display: inline-block;
+}
+
+input[type="password"]+.icon .fa-eye-slash {
+    display: none;
+}
+
+.fa-eye {
+    display: none;
+}
+
+input[type="text"]+.icon .fa-eye {
+    display: none;
+}
+
+input[type="password"]+.icon .fa-eye {
+    display: inline-block;
+} */
